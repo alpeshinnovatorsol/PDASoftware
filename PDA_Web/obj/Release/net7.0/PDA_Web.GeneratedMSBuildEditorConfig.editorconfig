@@ -1,0 +1,593 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PDA_Web
+build_property.RootNamespace = PDA_Web
+build_property.ProjectDir = E:\PDA_Web\PDA_Web\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = E:\PDA_Web\PDA_Web
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 7.0
+build_property.EnableCodeStyleSeverity = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/AdminLogin/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Mb2dpblxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/AdminLogin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Mb2dpblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/BankMaster/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFua01hc3RlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/BankMaster/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFua01hc3RlclxwYXJ0aWFsXF9WaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Berth/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmVydGhcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Berth/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmVydGhccGFydGlhbFxfVmlld0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CallType/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FsbFR5cGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CallType/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FsbFR5cGVccGFydGlhbFxfVmlld0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29EZXRhaWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoDetails/partial/cargoType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29EZXRhaWxzXHBhcnRpYWxcY2FyZ29UeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoDetails/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29EZXRhaWxzXHBhcnRpYWxcX1ZpZXdBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoFamily/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29GYW1pbHlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoFamily/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29GYW1pbHlccGFydGlhbFxfVmlld0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoHandled/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29IYW5kbGVkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoHandled/partial/BerthFilterList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29IYW5kbGVkXHBhcnRpYWxcQmVydGhGaWx0ZXJMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoHandled/partial/BerthList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29IYW5kbGVkXHBhcnRpYWxcQmVydGhMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoHandled/partial/TerminalFilterList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29IYW5kbGVkXHBhcnRpYWxcVGVybWluYWxGaWx0ZXJMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoHandled/partial/TerminalList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29IYW5kbGVkXHBhcnRpYWxcVGVybWluYWxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoHandled/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29IYW5kbGVkXHBhcnRpYWxcX1ZpZXdBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoType/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29UeXBlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/CargoType/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyZ29UeXBlXHBhcnRpYWxcX1ZpZXdBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/ChargeCode/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhcmdlQ29kZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/ChargeCode/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2hhcmdlQ29kZVxwYXJ0aWFsXF9WaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/City/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2l0eVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/City/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2l0eVxwYXJ0aWFsXF9WaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Company/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tcGFueVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Company/partial/CityList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tcGFueVxwYXJ0aWFsXENpdHlMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Company/partial/StatesList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tcGFueVxwYXJ0aWFsXFN0YXRlc0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Company/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tcGFueVxwYXJ0aWFsXF9WaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Country/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ291bnRyeVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Country/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ291bnRyeVxwYXJ0aWFsXF9WaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Currency/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VycmVuY3lcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Currency/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VycmVuY3lccGFydGlhbFxfVmlld0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Customer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Customer/partial/BankList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VzdG9tZXJccGFydGlhbFxCYW5rTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Customer/partial/CityList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VzdG9tZXJccGFydGlhbFxDaXR5TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Customer/partial/CountryCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VzdG9tZXJccGFydGlhbFxDb3VudHJ5Q29kZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Customer/partial/StatesList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VzdG9tZXJccGFydGlhbFxTdGF0ZXNMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Customer/partial/_CustomerUserDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VzdG9tZXJccGFydGlhbFxfQ3VzdG9tZXJVc2VyRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Customer/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VzdG9tZXJccGFydGlhbFxfVmlld0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Customer/partial/_ViewAllCustomerUserDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VzdG9tZXJccGFydGlhbFxfVmlld0FsbEN1c3RvbWVyVXNlckRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Designation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVzaWduYXRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Designation/partial/_viewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVzaWduYXRpb25ccGFydGlhbFxfdmlld0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Disclaimers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGlzY2xhaW1lcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Disclaimers/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGlzY2xhaW1lcnNccGFydGlhbFxfVmlld0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/EmailNotificationConfig/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1haWxOb3RpZmljYXRpb25Db25maWdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/EmailNotificationConfig/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1haWxOb3RpZmljYXRpb25Db25maWdccGFydGlhbFxfVmlld0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Expense/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhwZW5zZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Expense/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhwZW5zZVxwYXJ0aWFsXF9WaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Formulaattributes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRm9ybXVsYWF0dHJpYnV0ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Formulaattributes/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRm9ybXVsYWF0dHJpYnV0ZXNccGFydGlhbFxfVmlld0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Notes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTm90ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Notes/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTm90ZXNccGFydGlhbFxfVmlld0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PDAEstimator/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUERBRXN0aW1hdG9yXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PDAEstimator/partial/BerthList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUERBRXN0aW1hdG9yXHBhcnRpYWxcQmVydGhMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PDAEstimator/partial/CompanyName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUERBRXN0aW1hdG9yXHBhcnRpYWxcQ29tcGFueU5hbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PDAEstimator/partial/TerminalList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUERBRXN0aW1hdG9yXHBhcnRpYWxcVGVybWluYWxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PDAEstimator/partial/_Berths.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUERBRXN0aW1hdG9yXHBhcnRpYWxcX0JlcnRocy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PDAEstimator/partial/_CargoList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUERBRXN0aW1hdG9yXHBhcnRpYWxcX0NhcmdvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PDAEstimator/partial/_ReportList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUERBRXN0aW1hdG9yXHBhcnRpYWxcX1JlcG9ydExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PDAEstimator/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUERBRXN0aW1hdG9yXHBhcnRpYWxcX1ZpZXdBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PDAEstimator/PDAEstimator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUERBRXN0aW1hdG9yXFBEQUVzdGltYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PDAEstimator/PDAEstimatorOutput.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUERBRXN0aW1hdG9yXFBEQUVzdGltYXRvck91dHB1dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PortActivityType/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydEFjdGl2aXR5VHlwZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PortActivityType/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydEFjdGl2aXR5VHlwZVxwYXJ0aWFsXF9WaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PortDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydERldGFpbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PortDetails/partial/CityList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydERldGFpbHNccGFydGlhbFxDaXR5TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PortDetails/partial/StatesList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydERldGFpbHNccGFydGlhbFxTdGF0ZXNMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PortDetails/partial/_Berths.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydERldGFpbHNccGFydGlhbFxfQmVydGhzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PortDetails/partial/_Terminals.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydERldGFpbHNccGFydGlhbFxfVGVybWluYWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/PortDetails/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydERldGFpbHNccGFydGlhbFxfVmlld0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/ROEName/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUk9FTmFtZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/ROEName/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUk9FTmFtZVxwYXJ0aWFsXF9WaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/ROERate/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUk9FUmF0ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/ROERate/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUk9FUmF0ZVxwYXJ0aWFsXF9WaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Role/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Role/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZVxwYXJ0aWFsXF9WaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Shared/Components/Footer/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vdGVyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Shared/Components/Header/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGVhZGVyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Shared/Components/Sidebar/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2lkZWJhclxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/State/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/State/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdGVccGFydGlhbFxfVmlld0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/TariffSegment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmU2VnbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/TariffSegment/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmU2VnbWVudFxwYXJ0aWFsXF9WaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tariff/Formula.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmXEZvcm11bGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tariff/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tariff/partial/BerthList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmXHBhcnRpYWxcQmVydGhMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tariff/partial/ChargeCodesList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmXHBhcnRpYWxcQ2hhcmdlQ29kZXNMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tariff/partial/FormulaList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmXHBhcnRpYWxcRm9ybXVsYUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tariff/partial/TerminalList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmXHBhcnRpYWxcVGVybWluYWxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tariff/partial/_CargoFilterList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmXHBhcnRpYWxcX0NhcmdvRmlsdGVyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tariff/partial/_CargoList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmXHBhcnRpYWxcX0NhcmdvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tariff/partial/_TerminalFilterList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmXHBhcnRpYWxcX1Rlcm1pbmFsRmlsdGVyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tariff/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmXHBhcnRpYWxcX1ZpZXdBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tariff/partial/_ViewAllFormula.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmXHBhcnRpYWxcX1ZpZXdBbGxGb3JtdWxhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tariff/partial/_ViewAllTariffRate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFyaWZmXHBhcnRpYWxcX1ZpZXdBbGxUYXJpZmZSYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tax/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGF4XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Tax/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGF4XHBhcnRpYWxcX1ZpZXdBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/UserResetPassword/ChangePasswordByCurrentPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclJlc2V0UGFzc3dvcmRcQ2hhbmdlUGFzc3dvcmRCeUN1cnJlbnRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/UserResetPassword/ForgotUserPasswordIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclJlc2V0UGFzc3dvcmRcRm9yZ290VXNlclBhc3N3b3JkSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/User/partial/_UserPermission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxwYXJ0aWFsXF9Vc2VyUGVybWlzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/User/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxwYXJ0aWFsXF9WaWV3QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/User/UserRolePermission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxVc2VyUm9sZVBlcm1pc3Npb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/Dashboard/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFByaXZhY3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/Login/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/Login/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/Login/RegisterNewUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXJOZXdVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/PDA/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUERBXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/PDA/partial/BerthList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUERBXHBhcnRpYWxcQmVydGhMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/PDA/partial/CompanyName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUERBXHBhcnRpYWxcQ29tcGFueU5hbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/PDA/partial/PDAEstimatorOutput.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUERBXHBhcnRpYWxcUERBRXN0aW1hdG9yT3V0cHV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/PDA/partial/TerminalList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUERBXHBhcnRpYWxcVGVybWluYWxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/PDA/partial/_Berths.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUERBXHBhcnRpYWxcX0JlcnRocy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/PDA/partial/_CargoList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUERBXHBhcnRpYWxcX0NhcmdvTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/PDA/partial/_ViewAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUERBXHBhcnRpYWxcX1ZpZXdBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/PDA/PDAEstimator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUERBXFBEQUVzdGltYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/RegisterUser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJVc2VyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/RegisterUser/partial/BankList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJVc2VyXHBhcnRpYWxcQmFua0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/RegisterUser/partial/CityList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJVc2VyXHBhcnRpYWxcQ2l0eUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/RegisterUser/partial/StatesList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJVc2VyXHBhcnRpYWxcU3RhdGVzTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/ResetPassword/ChangePasswordByCurrentPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXRQYXNzd29yZFxDaGFuZ2VQYXNzd29yZEJ5Q3VycmVudFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/ResetPassword/ForgotPasswordIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXRQYXNzd29yZFxGb3Jnb3RQYXNzd29yZEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/Shared/Components/Footer/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vdGVyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/Shared/Components/Header/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGVhZGVyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/Shared/Components/Sidebar/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2lkZWJhclxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/PDA_Web/PDA_Web/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ines7m3pto
+
+[E:/PDA_Web/PDA_Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-6ikqo23t4u

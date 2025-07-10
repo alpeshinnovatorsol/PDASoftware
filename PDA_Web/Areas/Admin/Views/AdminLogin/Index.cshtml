@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+@{
+    Layout = null;
+}
+@model PDAEstimator_Domain.Entities.UserAuth
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PDAEstimator | Log in</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <style>
+        .box {
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .box a {
+                padding: 15px;
+                background-color: #fff;
+                border-radius: 3px;
+                text-decoration: none;
+            }
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgb(210 210 210 / 11%);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            position: relative;
+            background: white;
+            padding: 1em 2em;
+            border-radius: 4px;
+        }
+
+        .modal:target {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        @*<div class="login-logo">
+        <a href="~/index2.html"><b>U & I Holidays</b></a>
+        </div>*@
+        <!-- /.login-logo -->
+        <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <a class="h1"><b>PDA </b>Estimator</a>
+            </div>
+            <div class="card-body">
+                <p class="login-box-msg">Sign in to start your session</p>
+
+                @* <form method="post"> *@
+                <div class="input-group mb-3">
+                    @*                         <input type="text" class="form-control"id="EmployCode" placeholder="User Name" asp-for="@Model.EmployCode"> *@
+                    <input type="text" class="form-control" id="EmployCode" placeholder="Email" asp-for="@Model.EmployCode">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-envelope"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" id="Password" placeholder="Password" asp-for="@Model.UserPassword">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3" style="display:none" id="MacAddressdiv">
+                    <input type="text" class="form-control"  id="MacAddress" placeholder="MacAddress" asp-for="@Model.MacAddress">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <a href="#popup-box">
+                                <span class="fas fa-question-circle"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="txtOtp" placeholder="OTP" asp-for="@Model.OTP" style="display:none;">
+
+                </div>
+                <div class="row">
+                    <div class="col-8" id="divCountdown" style="display:none;">
+                        <div style="display:flex;">
+                            <div> Resent OTP in :</div> <div class="countdown col-3" style="color:mediumseagreen"></div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-8">
+                        <a asp-controller="AdminLogin" asp-action="ForgotPassword">Reset Password!!!</a>
+                    </div>
+                    <div class="col-4">
+                        <button id="RequiestOTP" onclick="RequiestOTP()" class="btn btn-primary btn-block">Send OTP</button>
+                        <button id="BtnLogin" style="display:none;" onclick="BtnLogin()" class="btn btn-primary btn-block">Sign In</button>
+                    </div>
+                </div>
+                @* </form> *@
+
+
+            </div>
+        </div>
+
+        <div id="popup-box" class="modal">
+            <div class="content">
+                <h3 style="color: green">
+                    How to get MacAddress
+                </h3>
+                <p>
+                    <b> Windows </b><br />
+                    <ol>
+                        <li>Open the Command Prompt by pressing the Windows key + R, typing cmd, and pressing Enter</li>
+                        <li>
+                            Type getmac and press Enter
+                        </li>
+                        <li>
+                            The MAC address will be displayed in the Command Prompt window and you need to pick first one Physical Address.
+                        </li>
+                    </ol>
+                    <b> Mac </b><br />
+                    <ol>
+                        <li>
+                            Select the Apple menu, then click System Settings
+                        <li>
+                            Click Network
+                        </li>
+                        <li>
+                            Click the desired network, then click Details
+                        </li>
+                        <li>
+                            Click Hardware
+                        </li>
+                        <li>
+                            The MAC address will be listed below and you need to pick first one Physical Address.
+                        </li>
+                    </ol>
+                </p>
+                <a href="#" style="
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        color: #fe0606;
+                        font-size: 30px;
+                        text-decoration: none;
+                    ">&times;</a>
+            </div>
+        </div>
+    </div>
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/dist/js/adminlte.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript">
+        // function GetMacAddress() {
+        //     var obj = new COMObject("MSXML2.DOMDocument.6.0");
+        //     var s = obj.ConnectServer(".");
+        //     var properties = s.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfiguration");
+        //     var e = new Enumerator(properties);
+        //     var output;
+        //     output = '<table border="0" cellpadding="5px" cellspacing="1px" bgcolor="#CCCCCC">';
+        //     output = output + '<tr bgcolor="#EAEAEA"><td>Caption</td><td>MACAddress</td></tr>';
+        //     while (!e.atEnd()) {
+        //         e.moveNext();
+        //         var p = e.item();
+        //         if (!p) continue;
+        //         output = output + '<tr bgcolor="#FFFFFF">';
+        //         output = output + '<td>' + p.Caption + '</td>';
+        //         output = output + '<td>' + p.MACAddress + '</td>';
+        //         output = output + '</tr>';
+        //     }
+        //     output = output + '</table>';
+
+        //     return output;
+        // }
+    </script>
+    <script>
+
+
+        var showLoader = function (form) {
+            $("<div id='loading' class='loading'/>").css({
+                'position': 'fixed',
+                'left': 0,
+                'right': 0,
+                'bottom': 0,
+                'top': 0,
+                'background': 'rgb(106 106 106 / 38%)',
+                'z-index': '9999',
+                'text-align': 'center'
+            }).appendTo($("body"))
+                .append(
+                    $("<img width='80' style='padding-top:300px;'/>").attr("src", "https://i.gifer.com/Vp3R.gif")
+                );
+        }
+    </script>
+    <script>
+
+
+        function StartTimer() {
+            $('#divCountdown').show();
+            var timer2 = "03:00";
+            var interval = setInterval(function () {
+
+                var timer = timer2.split(':');
+                //by parsing integer, I avoid all extra string processing
+                var minutes = parseInt(timer[0], 10);
+                var seconds = parseInt(timer[1], 10);
+                --seconds;
+                minutes = (seconds < 0) ? --minutes : minutes;
+                if (minutes < 0) clearInterval(interval);
+                seconds = (seconds < 0) ? 59 : seconds;
+                seconds = (seconds < 10) ? '0' + seconds : seconds;
+                //minutes = (minutes < 10) ?  minutes : minutes;
+                $('.countdown').html(minutes + ':' + seconds);
+                timer2 = minutes + ':' + seconds;
+
+                if (timer2 == "0:00") {
+                    $('.countdown').html('');
+                    $('#BtnLogin').hide();
+                    $('#RequiestOTP').show();
+                    // return;
+                }
+
+                if (timer2 == "-2:59") {
+                    $('.countdown').html('');
+                    $('#divCountdown').hide();
+                }
+            }, 1000);
+
+        }
+
+        function RequiestOTP() {
+            showLoader(this);
+            var user;
+
+            user = {
+                "EmployCode": $('#EmployCode').val(),
+                "UserPassword": $('#Password').val(),
+                "MacAddress": $('#MacAddress').val(),
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/Admin/AdminLogin/Index",
+                data: user,
+                success: function (data) {
+                    if (data.proceed == false) {
+                        $('.loading').hide();
+                        if (data.msg == "MacAddress") {
+                            $('#MacAddressdiv').show();
+                        }
+                        return;
+                    }
+                    if (data.proceed == true) {
+                        StartTimer();
+                        $('.loading').hide();
+                        $('#BtnLogin').show();
+                        $('#RequiestOTP').hide();
+                        $('#txtOtp').show();
+                        // $('#txtOtp').val(data.otp);
+                        $("#EmployCode").attr("disabled", "disabled");
+                        $("#Password").attr("disabled", "disabled");
+                    }
+                    else {
+                        $('.loading').hide();
+                    }
+                    // $.ajax({
+                    //     type: "POST",
+                    //     url: "/Admin/AdminLogin/Index",
+                    //     data: user,
+                    //     success: function (data) {
+                    //         if (data.proceed == true) {
+                    //             StartTimer();
+                    //             $('.loading').hide();
+                    //             $('#BtnLogin').show();
+                    //             $('#RequiestOTP').hide();
+                    //             $('#txtOtp').show();
+                    //             // $('#txtOtp').val(data.otp);
+                    //             $("#EmployCode").attr("disabled", "disabled");
+                    //             $("#Password").attr("disabled", "disabled");
+                    //         } else {
+                    //             $('.loading').hide();
+                    //         }
+                    //         // loadData();
+                    //     },
+                    //     error: function () {
+                    //         $('.loading').hide();
+                    //     }
+                    // });
+                },
+                error: function () {
+                    $('.loading').hide();
+                    // $('#MacAddress').show();
+                }
+            });
+
+
+
+
+        }
+
+        function BtnLogin() {
+
+            var user;
+            user = {
+                "EmployCode": $('#EmployCode').val(),
+                "UserPassword": $('#Password').val(),
+                "Otp": $('#txtOtp').val()
+            }
+
+            // var macaddress = GetMacAddress();
+            // alert(macaddress);
+            $.ajax({
+                type: "POST",
+                url: "/Admin/AdminLogin/LoginwitOTP",
+                data: user,
+                success: function (data) {
+                    if (data.proceed == true) {
+                        window.location.href = '/Admin/Home';
+                        $('#txtOtp').val('');
+                    }
+                    // else {
+                    //     window.location.href = '/Admin/AdminLogin/Index/';
+                    // }
+                    // loadData();
+                },
+                error: function () {
+                    window.location.href = '/Admin/AdminLogin';
+                }
+            });
+
+        }
+
+    </script>
+    @*    @await Component.InvokeAsync("NToastNotify")
+    *@
+    @await Component.InvokeAsync("NToastNotify")
+</body>
+</html>

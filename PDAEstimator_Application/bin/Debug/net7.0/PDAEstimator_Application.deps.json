@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "PDAEstimator_Application/1.0.0": {
+        "dependencies": {
+          "PDAEstimator_Domain": "1.0.0"
+        },
+        "runtime": {
+          "PDAEstimator_Application.dll": {}
+        }
+      },
+      "PDAEstimator_Domain/1.0.0": {
+        "runtime": {
+          "PDAEstimator_Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PDAEstimator_Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PDAEstimator_Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
