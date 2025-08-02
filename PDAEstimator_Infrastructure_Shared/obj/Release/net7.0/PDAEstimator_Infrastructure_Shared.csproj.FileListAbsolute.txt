@@ -1,0 +1,13 @@
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\bin\Release\net7.0\PDAEstimator_Infrastructure_Shared.deps.json
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\bin\Release\net7.0\PDAEstimator_Infrastructure_Shared.dll
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\bin\Release\net7.0\PDAEstimator_Infrastructure_Shared.pdb
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\obj\Release\net7.0\PDAEstimator_Infrastructure_Shared.csproj.AssemblyReference.cache
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\obj\Release\net7.0\PDAEstimator_Infrastructure_Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\obj\Release\net7.0\PDAEstimator_Infrastructure_Shared.AssemblyInfoInputs.cache
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\obj\Release\net7.0\PDAEstimator_Infrastructure_Shared.AssemblyInfo.cs
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\obj\Release\net7.0\PDAEstimator_Infrastructure_Shared.csproj.CoreCompileInputs.cache
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\obj\Release\net7.0\PDAEstimator_Infrastructure_Shared.sourcelink.json
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\obj\Release\net7.0\PDAEstimator_Infrastructure_Shared.dll
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\obj\Release\net7.0\refint\PDAEstimator_Infrastructure_Shared.dll
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\obj\Release\net7.0\PDAEstimator_Infrastructure_Shared.pdb
+E:\PDA_Web\PDAEstimator_Infrastructure_Shared\obj\Release\net7.0\ref\PDAEstimator_Infrastructure_Shared.dll

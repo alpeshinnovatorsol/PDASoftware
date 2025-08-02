@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PDA_Web.props" />
+</Project>
