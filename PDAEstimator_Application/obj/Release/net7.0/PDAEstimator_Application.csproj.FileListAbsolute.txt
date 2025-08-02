@@ -1,0 +1,16 @@
+E:\PDA_Web\PDAEstimator_Application\bin\Release\net7.0\PDAEstimator_Application.deps.json
+E:\PDA_Web\PDAEstimator_Application\bin\Release\net7.0\PDAEstimator_Application.dll
+E:\PDA_Web\PDAEstimator_Application\bin\Release\net7.0\PDAEstimator_Application.pdb
+E:\PDA_Web\PDAEstimator_Application\bin\Release\net7.0\PDAEstimator_Domain.dll
+E:\PDA_Web\PDAEstimator_Application\bin\Release\net7.0\PDAEstimator_Domain.pdb
+E:\PDA_Web\PDAEstimator_Application\obj\Release\net7.0\PDAEstimator_Application.csproj.AssemblyReference.cache
+E:\PDA_Web\PDAEstimator_Application\obj\Release\net7.0\PDAEstimator_Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\PDA_Web\PDAEstimator_Application\obj\Release\net7.0\PDAEstimator_Application.AssemblyInfoInputs.cache
+E:\PDA_Web\PDAEstimator_Application\obj\Release\net7.0\PDAEstimator_Application.AssemblyInfo.cs
+E:\PDA_Web\PDAEstimator_Application\obj\Release\net7.0\PDAEstimator_Application.csproj.CoreCompileInputs.cache
+E:\PDA_Web\PDAEstimator_Application\obj\Release\net7.0\PDAEstimator_Application.sourcelink.json
+E:\PDA_Web\PDAEstimator_Application\obj\Release\net7.0\PDAEstim.72590597.Up2Date
+E:\PDA_Web\PDAEstimator_Application\obj\Release\net7.0\PDAEstimator_Application.dll
+E:\PDA_Web\PDAEstimator_Application\obj\Release\net7.0\refint\PDAEstimator_Application.dll
+E:\PDA_Web\PDAEstimator_Application\obj\Release\net7.0\PDAEstimator_Application.pdb
+E:\PDA_Web\PDAEstimator_Application\obj\Release\net7.0\ref\PDAEstimator_Application.dll

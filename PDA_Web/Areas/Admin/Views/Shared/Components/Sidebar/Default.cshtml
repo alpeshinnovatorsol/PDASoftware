@@ -1,0 +1,528 @@
+﻿@using PDAEstimator_Domain.Entities;
+
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+        <img src="/dist/img/samsara_group_logo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">PDA Estimator</span>
+    </a>
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <!-- SidebarSearch Form -->
+        <div class="form-inline">
+            <div class="input-group" data-widget="sidebar-search">
+                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-sidebar">
+                        <i class="fas fa-search fa-fw"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                with font-awesome or any other icon font library -->
+                <li class="nav-item" id="itemDashboard">
+                    <a href="~/Admin/Home" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Dashboard
+                        </p>
+                    </a>
+                </li>
+                @{
+                    List<UserPermissionRights> userPermissionRights = new List<UserPermissionRights>();
+                    userPermissionRights = ViewBag.UserPermissionModel;
+
+                    List<UserRoleName> userRoleName = new List<UserRoleName>();
+                    userRoleName = ViewBag.UserRoleName;
+
+                }
+                @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "PDA Estimator" && x.UserRolePermission == "View").Count() > 0))
+                {
+                    <li class="nav-item" >
+                        <a href="/Admin/PDAEstimator/Index?param2=PDA" class="nav-link" id="PDAMenu">
+                            <i class="nav-icon  fas fa-calculator"></i>
+                            <p>
+                                PDA Estimator
+                            </p>
+                        </a>
+                    </li>
+                }
+                <li href="#" class="nav-item">
+                    @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Add Tariff" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "Tariff Slabs" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "Expense Category" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "Charge Code" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "Formula Attributes" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "Formulas" && x.UserRolePermission == "View").Count() > 0))
+                            {
+                    <a href="#" class="nav-link" id="TariffMainMenu">
+                        <i class="nav-icon fas fa-percent"></i>
+                        <p>
+                            Tariff
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                            }
+                    <ul class="nav nav-treeview">
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Add Tariff" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="Tariff" asp-action="Index" class="nav-link" id="TariffMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Add Tariff</p>
+                                </a>
+                            </li>
+                        }
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Tariff Slabs" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="TariffSegment" asp-action="Index" class="nav-link" id="TariffSlabsMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Tariff Slabs</p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Expense Category" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="Expense" asp-action="Index" class="nav-link" id="ExpenseMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Expense Category</p>
+                                </a>
+                            </li>
+                        }
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Charge Code" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="ChargeCode" asp-action="Index" class="nav-link" id="ChargeCodeMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Charge Code</p>
+                                </a>
+                            </li>
+                        }
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Formula Attributes" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="Formulaattributes" asp-action="Index" class="nav-link" id="FormulaattributesMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Formula Attributes</p>
+                                </a>
+                            </li>
+                        }
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Formulas" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="Tariff" asp-action="Formula" class="nav-link" id="FormulasMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Formulas</p>
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                </li>
+                @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Customer" && x.UserRolePermission == "View").Count() > 0))
+                {
+                    <li class="nav-item">
+                        <a asp-area="Admin" asp-controller="Customer" class="nav-link" id="Customer_Menu">
+                            <i class="far fa-user-circle nav-icon"></i>
+                            <p>
+                                Customer
+                            </p>
+                        </a>
+                    </li>
+                }
+                @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Reports" && x.UserRolePermission == "View").Count() > 0))
+                {
+                    <li class="nav-item">
+                       @*  <a asp-area="Admin" asp-controller="PDAEstimator" asp-action="LoadAllReport" class="nav-link" id="PDAMenu">
+                            <i class="nav-icon fas fa-chart-pie"></i>
+                            <p>
+                                Reports
+                            </p>
+                        </a> *@
+                        <a href="/Admin/PDAEstimator/Index?param2=Report" class="nav-link" id="ReportMenu">
+                            <i class="nav-icon fas fa-chart-pie"></i>
+                            <p>
+                                Reports
+                            </p>
+                        </a>
+                    </li>
+                }
+
+                <li href="#" class="nav-item">
+                    @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Tax Master" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "Currency" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "ROE" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "ROEName" && x.UserRolePermission == "View").Count() > 0))
+             {
+                    <a href="#" class="nav-link" id="FinanceMaster">
+                        <i class="nav-icon fas fa-hand-holding-usd"></i>
+                        <p>
+                            Finance Master
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+             }
+                    <ul class="nav nav-treeview">
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Tax Master" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="Tax" asp-action="Index" class="nav-link" id="TaxMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>
+                                        Tax Master
+                                    </p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Currency" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="Currency" asp-action="Index" class="nav-link" id="CurrencyMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Currency</p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "ROE" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="ROERate" asp-action="Index" class="nav-link" id="ROERateMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>ROE</p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "ROEName" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="ROEName" asp-action="Index" class="nav-link" id="ROENameMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>ROEName</p>
+                                </a>
+                            </li>
+                        }
+
+
+                    </ul>
+                </li>
+                <li href="#" class="nav-item">
+                    @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Port Master" && x.UserRolePermission == "View").Count() > 0))
+             {
+                    <a href="#" class="nav-link" id="PortMainMenu">
+                        <i class="nav-icon fas fa-ship"></i>
+                        <p>
+                            Port
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+             }
+                    <ul class="nav nav-treeview">
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Port Master" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="PortDetails" asp-action="Index" class="nav-link" id="PortMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>
+                                        Port Master
+                                    </p>
+                                </a>
+                            </li>
+                        }
+
+                        @*   <li class="nav-item">
+                            <a asp-area="Admin" asp-controller="Berth" asp-action="Index" class="nav-link" id="BerthMenu">
+                                <i class="far fa-circle11 nav-icon"></i>
+                                <p>
+                                    Berthing Type
+                                </p>
+                            </a>
+                        </li>*@
+
+                    </ul>
+                </li>
+                <li href="#" class="nav-item">
+                    @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Cargo Master" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "Cargo Type" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "Cargo Family" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "Cargo Handled" && x.UserRolePermission == "View").Count() > 0))
+             {
+                    <a href="#" class="nav-link" id="CargoMainMenu">
+                        <i class="nav-icon fas fa-truck"></i>
+                        <p>
+                            Cargo
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+             }
+
+                    <ul class="nav nav-treeview">
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Cargo Master" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="CargoDetails" asp-action="Index" class="nav-link" id="CargoDetailsMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>
+                                        Cargo Master
+                                    </p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Cargo Type" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="CargoType" asp-action="Index" class="nav-link" id="CargoTypeMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>
+                                        Cargo Type
+                                    </p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Cargo Family" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="CargoFamily" asp-action="Index" class="nav-link" id="CargoFamilyMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>
+                                        Cargo Family
+                                    </p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Cargo Handled" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="CargoHandled" asp-action="Index" class="nav-link" id="CargoHandledMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>
+                                        Cargo Handled
+                                    </p>
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Country" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "State" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "City" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "Call Type" && x.UserRolePermission == "View").Count() > 0))
+                            {
+                        <a href="#" class="nav-link" id="MasterMenu">
+                            <i class="nav-icon fas fa-edit"></i>
+                        <p>
+                            Masters
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    }
+                    <ul class="nav nav-treeview">
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Designation" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="Designation" asp-action="Index" class="nav-link" id="DesignationMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Designation</p>
+                                </a>
+                            </li>
+                        }
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Country" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="Country" asp-action="Index" class="nav-link" id="CountryMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Country</p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "State" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="State" asp-action="Index" class="nav-link" id="StateMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>State</p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "City" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="City" asp-action="Index" class="nav-link" id="CityMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>City</p>
+                                </a>
+                            </li>
+                        }
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Call Type" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="CallType" asp-action="Index" class="nav-link" id="CallTypeMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Call Type</p>
+                                </a>
+                            </li>
+                        }
+                     
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Notes" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="Notes" asp-action="Index" class="nav-link" id="NotesMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Notes</p>
+                                </a>
+                            </li>
+                        }
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Disclaimers" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="Disclaimers" asp-action="Index" class="nav-link" id="DisclaimersMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Disclaimers</p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Port Operation Type" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="PortActivityType" asp-action="Index" class="nav-link" id="PortActivityTypeMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Port Operation Type</p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Email Notification Config" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="EmailNotificationConfig" asp-action="Index" class="nav-link" id="EmailNotificationConfigMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>Email Notification Config</p>
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                </li>
+
+                <li href="#" class="nav-item">
+                    @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Users" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "User Roles" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "Role Permission" && x.UserRolePermission == "View").Count() > 0))
+             {
+                    <a href="#" class="nav-link" id="UserMainMenu">
+                        <i class="nav-icon fa fa-users"></i>
+                        <p>
+                            User Master
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+             }
+                    <ul class="nav nav-treeview">
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Users" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="User" asp-action="Index" class="nav-link" id="UsersMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>
+                                        Users
+                                    </p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "User Roles" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="Role" class="nav-link" id="UserRolesMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>
+                                        User Roles
+                                    </p>
+                                </a>
+                            </li>
+                        }
+
+                     @*   <li class="nav-item">
+                            <a asp-area="Admin" asp-controller="Customer" class="nav-link" id="UserRolesMenu">
+                                <i class="far fa-circle11 nav-icon"></i>
+                                <p>
+                                    Customer 
+                                </p>
+                            </a>
+                        </li>*@
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Role Permission" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="User" asp-action="UserRolePermission" class="nav-link" id="RolePermissionMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>
+                                        Role Permission
+                                    </p>
+                                </a>
+                            </li>
+                        }
+
+                       
+                    </ul>
+                </li>
+
+                <li href="#" class="nav-item">
+                    @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Company" && x.UserRolePermission == "View").Count() > 0 || userPermissionRights.Where(x => x.MenuName == "Bank Master" && x.UserRolePermission == "View").Count() > 0))
+             {
+                    <a href="#" class="nav-link" id="Comney_Master">
+                            <i class="nav-icon fa fa-building"></i>
+                        <p>
+                            Company Master
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+             }
+                    <ul class="nav nav-treeview">
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Company" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="Company" asp-action="Index" class="nav-link" id="Compney">
+                                    <i class="nav-icon fas"></i>
+                                    <p>
+                                        Company
+                                    </p>
+                                </a>
+                            </li>
+                        }
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Bank Master" && x.UserRolePermission == "View").Count() > 0))
+                        {
+                            <li class="nav-item">
+                                <a asp-area="Admin" asp-controller="BankMaster" asp-action="Index" class="nav-link" id="BankMasterMenu">
+                                    <i class="far fa-circle11 nav-icon"></i>
+                                    <p>
+                                        Bank Master
+                                    </p>
+                                </a>
+                            </li>
+                        }
+
+
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="Admin" asp-controller="UserResetPassword" asp-action="ChangePasswordByCurrentPassword" class="nav-link" id="ChangePassMenu">
+                        <i class="nav-icon  fas fa-unlock"></i>
+                        <p>
+                            Change Password
+                        </p>
+                    </a>
+                </li>
+            </ul>
+
+
+        </nav>
+    </div>
+
+   
+</aside>

@@ -1,0 +1,12 @@
+E:\PDA_Web\PDAEstimator_Domain\bin\Debug\net7.0\PDAEstimator_Domain.deps.json
+E:\PDA_Web\PDAEstimator_Domain\bin\Debug\net7.0\PDAEstimator_Domain.dll
+E:\PDA_Web\PDAEstimator_Domain\bin\Debug\net7.0\PDAEstimator_Domain.pdb
+E:\PDA_Web\PDAEstimator_Domain\obj\Debug\net7.0\PDAEstimator_Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\PDA_Web\PDAEstimator_Domain\obj\Debug\net7.0\PDAEstimator_Domain.AssemblyInfoInputs.cache
+E:\PDA_Web\PDAEstimator_Domain\obj\Debug\net7.0\PDAEstimator_Domain.AssemblyInfo.cs
+E:\PDA_Web\PDAEstimator_Domain\obj\Debug\net7.0\PDAEstimator_Domain.csproj.CoreCompileInputs.cache
+E:\PDA_Web\PDAEstimator_Domain\obj\Debug\net7.0\PDAEstimator_Domain.sourcelink.json
+E:\PDA_Web\PDAEstimator_Domain\obj\Debug\net7.0\PDAEstimator_Domain.dll
+E:\PDA_Web\PDAEstimator_Domain\obj\Debug\net7.0\refint\PDAEstimator_Domain.dll
+E:\PDA_Web\PDAEstimator_Domain\obj\Debug\net7.0\PDAEstimator_Domain.pdb
+E:\PDA_Web\PDAEstimator_Domain\obj\Debug\net7.0\ref\PDAEstimator_Domain.dll

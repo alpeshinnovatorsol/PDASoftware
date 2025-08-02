@@ -1,0 +1,816 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Customer</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Customer</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- general form elements -->
+
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Add Customer </h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <div class="card-body">
+                        <input type="hidden" id="CustomerId" name="CustomerId" value="">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="Company">Customer's Company<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="_Company" placeholder="Company">
+                                </div>
+                            </div>
+                         
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="Status">CustomerStatus<span class="text-danger">*</span></label>
+                                    <input type="hidden" id="Oldstatus" value="" />
+                                    <select class="form-control" id="Status">
+                                        <option value="">Please Select</option>
+                                        <option value="Active">
+                                            Active
+                                        </option>
+                                        <option value="InActive">
+                                            InActive
+                                        </option>
+                                        <option value="Rejected">
+                                            Rejected
+                                        </option>
+                                        <option value="Pending For Approval">
+                                            Pending For Approval
+                                        </option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="PrimaryCompany">Primary Company<span class="text-danger">*</span></label>
+                                    @Html.DropDownList("PrimaryCompany", new SelectList(ViewBag.PrimaryCompany, "CompanyId", "CompanyName"), "Please Select", new { @class = "form-control" })
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="SecondaryCompany">Secondary Company</label>
+                                    @Html.ListBox("SecondaryCompany", new MultiSelectList(ViewBag.SecondaryCompany, "CompanyId", "CompanyName"), new { @class = "form-control" })
+                                </div>
+
+                            </div>
+                            <div class="col-sm-3">
+
+                                <div class="form-group" id="BeneficiaryBank">
+                                    <label for="Bank">Banks<span class="text-danger">*</span></label>
+                                    @Html.DropDownList("Beneficiary", new SelectList(ViewBag.BankData, "BankId", "Bank_Code"), "Please Select", new { @class = "form-control" })
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                    @using PDAEstimator_Domain.Entities;
+                    @if (ViewBag.UserPermissionModel != null)
+                    {
+                        List<UserPermissionRights> userPermissionRights = new List<UserPermissionRights>();
+                        List<UserRoleName> userRoleName = new List<UserRoleName>();
+                        userPermissionRights = ViewBag.UserPermissionModel;
+                        userRoleName = ViewBag.UserRoleName;
+
+                        @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "Customer" && x.UserRolePermission == "Edit").Count() > 0))
+                        {
+                            <div class="card-footer">
+                                <button class="btn btn-primary" onclick="customerSave()">Submit</button>
+                            </div>
+                        }
+                    }
+
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Customer List</h3>
+                    </div>
+                    <div class="card-body">
+                        <label for="">Filters:</label>
+                        <div class="row" style="padding-bottom: 10px;">                            
+                            <div class="col-sm-4" style="max-width: 20%;">
+                                <label for="CompanyFilter">Customer's Company</label>
+                                <input type="text" class="form-control" id="CompanyFilter" placeholder="Customer's Company">
+                            </div>
+                            <div class="col-sm-4" style="max-width: 20%;">
+                                <label for="StatusFilter">CustomerStatus</label>
+                                <select class="form-control" id="StatusFilter">
+                                    <option value="">Please Select</option>
+                                    <option value="Active">
+                                        Active
+                                    </option>
+                                    <option value="InActive">
+                                        InActive
+                                    </option>
+                                    <option value="Rejected">
+                                        Rejected
+                                    </option>
+                                    <option value="Pending For Approval">
+                                        Pending For Approval
+                                    </option>
+
+                                </select>
+                            </div>
+                        </div>
+                    <div id="viewAll" class="table-responsive"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="customeruserdetails" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document" style="max-width: 90% !important;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Customer-User Master</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="customeruserdetailsModelclose">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="customeruserdetailsModelbody">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section Scripts
+{
+    <script>
+        function customerSave() {
+            var Customer;
+            Customer = {
+                "CustomerId": $('#CustomerId').val(),
+                "Company": $('#_Company').val(),
+                "Status": $('#Status').val(),
+                "IsEmailNotification": $("#EmailNotification").prop('checked'),
+                "PrimaryCompanyId": $('#PrimaryCompany').val(),
+                "SecondaryCompanyId": $('#SecondaryCompany').val(),
+                "BankID": $('#Beneficiary').val(),
+                "Email": $('#Email').val(),
+                "Mobile": $('#Mobile').val(),
+                "CountryCode": $('#CountryCode').val(),
+                "Oldstatus": $('#Oldstatus').val(),
+            }
+
+            if ($('#_Company').val() == "") {
+                toastr.error("Please enter customer's company.", 'Error Alert');
+                $('#_Company').css("border-color", "Red");
+            }
+            else if ($('#Status').val() == "") {
+                toastr.error("Please Select Status.", 'Error Alert');
+                $('#Status').css("border-color", "Red");
+            }
+            else if ($('#PrimaryCompany').val() == "") {
+                toastr.error("Please primary company.", 'Error Alert');
+                $('#PrimaryCompany').css("border-color", "Red");
+            }
+
+
+            else {
+                $.ajax({
+                    type: "POST",
+                    url: "/Admin/Customer/CustomerSave",
+                    data: Customer,
+                    success: function (data) {
+                        if (!data.proceed) {
+                            return;
+                        }
+                        else {
+                            loadData();
+                        }
+
+                    },
+                    error: function () {
+                    }
+                });
+                $('#CustomerId').val("");
+               
+                $('#Status').val("");
+                $('#Beneficiary').val("");
+                $('#SecondaryCompany').val("");
+               
+                $('#PrimaryCompany').val("");
+                // $('#CustomerStatus').prop('checked', false);
+            }
+        }
+
+
+        function deleteCustomer(id) {
+            debugger
+
+            var Customer;
+
+            Customer = {
+                "CustomerId": id,
+                // "Salutation": $('#Salutation').val(),
+                // "FirstName": $('#FirstName').val(),
+                // "LastName": $('#LastName').val(),
+                // "Designation": $('#Designation').val(),
+                // "Address1": $('#Address1').val(),
+                // "Address2": $('#Address2').val(),
+                // "City": $('#City').val(),
+                // "State": $('#State').val(),
+                // "Company": $('#Company').val(),
+
+                // "Country": $('#Country').val(),
+                // "Email": $('#Email').val(),
+                // "Mobile": $('#Mobile').val(),
+                // "Password": $('#Password').val(),
+                // "Status": $('#Status').val()
+
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Customer/deleteCustomer",
+                data: Customer,
+                success: function (data) {
+                    loadData();
+                },
+                error: function () {
+                }
+            });
+
+        }
+
+        function editCustomer(id) {
+            //Id
+            $('#CustomerId').val(id);
+            debugger
+            var Customer;
+
+            Customer = {
+                "CustomerId": $('#CustomerId').val(),
+               
+                "Status": $('#Status').val(),
+                "BankID": $('#Beneficiary').val()
+
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Customer/editCustomer",
+                data: Customer,
+                success: function (data) {
+                    debugger
+                    $('#_Company').val(data.customer.company);
+                    $('#Status').val(data.customer.status);
+                    $('#Oldstatus').val(data.customer.status);
+                    $('#PrimaryCompany').val(data.customer.primaryCompany);
+                    $('#SecondaryCompany').val(data.customer.secondaryCompanyId);
+                    ///////////
+                    $('#Beneficiary').val(data.customer.bankID);
+                   
+
+                },
+                error: function () {
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            //$('#Comney_Master').addClass('active');
+            $('#Customer_Menu').addClass('active');
+            $('#Customer_Menu').parent().closest('ul').parent().addClass('menu-open');
+            // $('#Status').prop("checked", true);
+
+            debugger
+            if ('@ViewBag.CustomerStatus' == '2') {
+                $('#StatusFilter').val("Pending For Approval");
+                loadData();
+            }
+            else
+            {
+                loadData();
+            }
+            
+            $("#CompanyFilter").change(function () {
+                loadData();
+            });
+            $("#StatusFilter").change(function () {
+                debugger;
+                var Status= $('option:selected', this).val();
+               
+                $.ajax({
+                    url: '/Admin/Customer/LoadAll',
+                    type: 'POST',
+                    data: { Status: Status },
+                    success: function (data) {
+                        $("#viewAll").html(data);
+                    }
+                });
+                //loadData();
+            });
+            $("#Country").change(function () {
+                var countryid = $('option:selected', this).val();
+                debugger;
+                var Customer;
+                Customer = {
+                    "Country": countryid,
+                    "State": $("#State").val(),
+                    "City": $('#City').val(),
+
+                }
+
+                $.ajax({
+                    type: "GET",
+                    url: "/Admin/Customer/CountryOnchange",
+                    data: Customer,
+                    dataType: "HTML",
+                    success: function (data) {
+
+                        $("#Countrydrop").html(data);
+                        $.ajax({
+                            type: "GET",
+                            url: "/Admin/Customer/CountryOnchangeforCity",
+                            data: Customer,
+                            dataType: "HTML",
+                            success: function (data) {
+                                $("#Statedrop").html(data);
+
+                            },
+                            error: function () {
+                            }
+                        });
+                        $.ajax({
+                            type: "GET",
+                            url: "/Admin/Customer/CountryOnChangeforCountryCode",
+                            data: Customer,
+
+                            success: function (data) {
+                                $('#CountryCode').val(data.code),
+                                    $('#AlterCountryCode').val(data.code)
+
+                            },
+                            error: function () {
+                            }
+                        });
+                    },
+                    error: function () {
+                    }
+                });
+
+            });
+
+            $("#PrimaryCompany").change(function () {
+                debugger;
+                var compnayId = $('option:selected', this).val();
+
+                var Banks;
+                Banks = {
+                    "PrimaryCompanyId": compnayId,
+                    "Beneficiary_Bank_Name": $("#Beneficiary").val()
+                }
+                $.ajax({
+                    type: "GET",
+                    url: "/Admin/Customer/PrimaryCompneySelected",
+                    data: Banks,
+                    dataType: "HTML",
+                    success: function (data) {
+                        $("#BeneficiaryBank").html(data);
+                    },
+                    error: function () {
+                    }
+                });
+            })
+
+        });
+
+        function loadData(parm) {
+            var Customer;
+
+            Customer = {
+                "Status": $('#StatusFilter').val(),
+                 "Company": $('#CompanyFilter').val(),
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "/Admin/Customer/LoadAll",
+                data: Customer,
+                dataType: "HTML",
+                success: function (data) {
+                    $("#viewAll").html(data);
+                },
+                error: function () {
+                }
+            });
+        }
+
+
+
+        function validateEmail(Email) {
+            var emailRegex = /^[a-zA-Z0-9]+[-.,a-zA-Z0-9]+@@[-.,a-zA-Z.]+\.[a-zA-Z]{2,}$/;
+
+            var emailError = document.getElementById('emailError');
+
+            if (emailRegex.test(Email)) {
+                emailError.textContent = '';
+            } else {
+                emailError.textContent = 'Enter valid Email';
+                emailError.style.color = 'red';
+            }
+        }
+
+        function ChangeCountryfunc(val) {
+
+            var Countryid = val;
+            var Customer;
+            Customer = {
+                "Country": Countryid,
+                "State": $("#State").val(),
+                "City": $('#City').val(),
+            }
+            $.ajax({
+                type: "GET",
+                url: "/Admin/Customer/CountryOnchange",
+                data: Customer,
+                dataType: "HTML",
+                success: function (data) {
+
+                    $("#Countrydrop").html(data);
+                    $.ajax({
+                        type: "GET",
+                        url: "/Admin/Customer/CountryOnchangeforCity",
+                        data: Customer,
+                        dataType: "HTML",
+                        success: function (data) {
+                            $("#Statedrop").html(data);
+
+                        },
+                        error: function () {
+                        }
+                    });
+                    $.ajax({
+                        type: "GET",
+                        url: "/Admin/Customer/CountryOnChangeforCountryCode",
+                        data: Customer,
+
+                        success: function (data) {
+                            $('#CountryCode').val(data.code),
+                                $('#AlterCountryCode').val(data.code)
+
+                        },
+                        error: function () {
+                        }
+                    });
+                },
+                error: function () {
+                }
+            });
+
+        }
+
+        function callChangefunc(val) {
+            var Stateid = val;
+            var Customer;
+            Customer = {
+                "State": Stateid,
+                "City": $('#City').val(),
+            }
+
+            $.ajax({
+
+                type: "GET",
+                url: "/Admin/Customer/StateOnchange",
+                data: Customer,
+                dataType: "HTML",
+                success: function (data) {
+
+                    $("#Statedrop").html(data);
+
+                },
+                error: function () {
+                }
+            });
+        }
+
+        function FirstNameFilter_Change() {
+
+            loadcustomeruserData();
+        }
+
+        function Address1Filter_Change() {
+
+            loadcustomeruserData();
+        }
+
+        function EmailFilter_Change() {
+
+            loadcustomeruserData();
+        }
+
+        function CompanyFilter_Change() {
+
+            loadcustomeruserData();
+        }
+
+        function OnChangeCountryFilterfunc() {
+            loadcustomeruserData();
+        }
+
+
+        //random password
+        function generateRandomPassword(length) {
+            const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            let password = "";
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * charset.length);
+                password += charset.charAt(randomIndex);
+            }
+            return password;
+        }
+
+        // Usage
+        const randomPassword = generateRandomPassword(8);
+        $('#Password').val(randomPassword);
+
+        function onCurrencyChange(val, inputVal) {
+            if (inputVal == 1) {
+                $('#FirstName').css("border", "1px solid #ced4da");
+            }
+            else if (inputVal == 2) {
+                $('#CurrencyCode').css("border", "1px solid #ced4da");
+            }
+        }
+
+        function CustomerUserSave() {
+            var Status = false;
+            if ($('#CustomerUserStatus').is(":checked")) {
+                Status = true;
+            }
+            var Customer;
+            Customer = {
+                "ID": $('#CustomerUserId').val(),
+                "CustomerId": $('#CompanyDrop').val(),
+                "Salutation": $('#Salutation').val(),
+                "FirstName": $('#FirstName').val(),
+                "LastName": $('#LastName').val(),
+                "Designation": $('#Designation').val(),
+                "Address1": $('#Address1').val(),
+                "Address2": $('#Address2').val(),
+                "Company": $('#_Company').val(),
+                "City": $('#City').val(),
+                "State": $('#State').val(),
+                "Country": $('#Country').val(),
+                "Email": $('#Email').val(),
+                "Mobile": $('#Mobile').val(),
+                "Password": $('#Password').val(),
+                "CountryCode": $('#CountryCode').val(),
+                "AlterCountryCode": $('#AlterCountryCode').val(),
+                "AlternativeEmail": $('#AlternativeEmail').val(),
+                "Telephone": $('#Telephone').val(),
+                "Status": Status
+            }
+
+            debugger
+            if ($('#Salutation').val() == "") {
+                toastr.error("Please enter salutation.", 'Error Alert');
+                $('#Salutation').css("border-color", "Red");
+            } else if ($('#FirstName').val() == "") {
+                toastr.error("Please enter first name.", 'Error Alert');
+                $('#FirstName').css("border-color", "Red");
+            } else if ($('#LastName').val() == "") {
+                toastr.error("Please enter last name.", 'Error Alert');
+                $('#LastName').css("border-color", "Red");
+            }
+            else if ($('#Address1').val() == "") {
+                toastr.error("Please enter address 1.", 'Error Alert');
+                $('#Address1').css("border-color", "Red");
+            }
+
+            else {
+                $.ajax({
+                    type: "POST",
+                    url: "/Admin/Customer/CustomerUserSave",
+                    data: Customer,
+                    success: function (data) {
+                        if (!data.proceed) {
+                            return;
+                        }
+                        else {
+                            OpenCustomerUserMaster($('#CompanyDrop').val());
+                        }
+
+                    },
+                    error: function () {
+                    }
+                });
+
+                $('#Salutation').val("");
+                $('#FirstName').val("");
+                $('#LastName').val("");
+                $('#Designation').val("");
+                $('#Address1').val("");
+                $('#Address2').val("");
+                $('#_Company').val("");
+                $('#City').val("");
+                $('#State').val("");
+                $('#Country').val("");
+                $('#Email').val("");
+                $('#AlternativeEmail').val("");
+                $('#Mobile').val("");
+                $('#Telephone').val("");
+                $('#Password').val("");
+                $('#CustomerUserStatus').prop("checked", true);
+
+                $('#PrimaryCompany').val("");
+            }
+        }
+        function deleteCustomerUserDetails(id) {
+            debugger
+
+            var Customer;
+
+            Customer = {
+                "ID": id,
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Customer/deleteCustomerUserDetails",
+                data: Customer,
+                success: function (data) {
+                    OpenCustomerUserMaster($('#CompanyDrop').val());
+                },
+                error: function () {
+                }
+            });
+        }
+
+        function editCustomerUserDetails(id) {
+            var Status = false;
+            if ($('#CustomerUserStatus').is(":checked")) {
+                Status = true;
+            }
+            var ID = id;
+            debugger
+            var Customer;
+
+            Customer = {
+                "ID": ID,
+                "CustomerId": $('#CustomerId').val(),
+                "Salutation": $('#Salutation').val(),
+                "FirstName": $('#FirstName').val(),
+                "LastName": $('#LastName').val(),
+                "Designation": $('#Designation').val(),
+                "Address1": $('#Address1').val(),
+                "Address2": $('#Address2').val(),
+                "City": $('#City').val(),
+                "State": $('#State').val(),
+                "Country": $('#Country').val(),
+                "Company": $('#_Company').val(),
+                "Email": $('#Email').val(),
+                "AlternativeEmail": $('#AlternativeEmail').val(),
+                "Mobile": $('#Mobile').val(),
+                "Telephone": $('#Telephone').val(),
+                "Password": $('#Password').val(),
+                "Status": Status
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Customer/editCustomerUserDetails",
+                data: Customer,
+                success: function (data) {
+                    debugger
+                    $('#CustomerUserId').val(data.customer.id);
+                    $('#CustomerId').val(data.customer.customerId);
+                    $('#Salutation').val(data.customer.salutation);
+                    $('#FirstName').val(data.customer.firstName);
+                    $('#LastName').val(data.customer.lastName);
+                    $('#Designation').val(data.customer.designation);
+                    $('#Address1').val(data.customer.address1);
+                    $('#Address2').val(data.customer.address2);
+                    $('#City').val(data.customer.city);
+                    $('#State').val(data.customer.state);
+                    $('#Country').val(data.customer.country);
+                    $('#_Company').val(data.customer.company);
+                    $('#Email').val(data.customer.email);
+                    $('#AlternativeEmail').val(data.customer.alternativeEmail);
+                    //$('#AlterCountryCode').val(data.customer.alterCountryCode);
+                    //$('#CountryCode').val(data.customer.countryCode);
+                    $('#Mobile').val(data.customer.mobile);
+                    var a = $('#Mobile').val().split("-");
+                    $('#Mobile').val(a[1]);
+                    $('#CountryCode').val(a[0]);
+                    $('#Telephone').val(data.customer.telephone);
+                    var T = $('#Telephone').val().split("-");
+                    $('#Telephone').val(T[1]);
+                    $('#AlterCountryCode').val(T[0]);
+                    $('#Password').val(data.customer.password);
+                    $('#Status').val(data.customer.status);
+
+
+                },
+                error: function () {
+                }
+            });
+        }
+
+        function OpenCustomerUserMaster(id) {
+            debugger;
+            customeruserdetails = {
+                "CustomerId": id,
+                "Company": $("#PortName").val(),
+                "City": $('#City').val(),
+                "State": $("#State").val(),
+                "Country": $('#Country').val()
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Customer/OpenCustomerUserMaster",
+                data: customeruserdetails,
+                dataType: "html",
+                success: function (data) {
+                    $("#customeruserdetails").modal('hide');
+                    $("#customeruserdetails").modal('show');
+                    $("#customeruserdetails").find(".modal-body").html(data);
+                },
+                error: function () {
+                }
+            });
+        }
+
+        function loadcustomeruserData() {
+
+            var Customer;
+            Customer = {
+                "CustomerId": $('#CompanyDrop').val(),
+                "FirstName": $("#FirstNameFilter").val(),
+                "Address1": $('#Address1Filter').val(),
+                "Country": $('#CountryFilter').val(),
+                "Company": $('#CompanyFilter').val(),
+                "Email": $('#EmailFilter').val(),
+                "Mobile": $('#MobileFilter').val(),
+
+
+            }
+            $.ajax({
+                type: "GET",
+                url: "/Admin/Customer/loadcustomeruserData",
+                data: Customer,
+                dataType: "HTML",
+                success: function (data) {
+                    $("#viewAllCustomerUser").html(data);
+                },
+                error: function () {
+                }
+            });
+        }
+
+    </script>
+
+}

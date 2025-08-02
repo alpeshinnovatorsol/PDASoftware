@@ -1,0 +1,344 @@
+﻿@model IEnumerable<PDAEstimator_Domain.Entities.PDAEstimatorList>
+@using PDAEstimator_Domain.Entities;
+<style>
+    table td {
+        width: 14px;
+        word-wrap: break-word;
+    }
+</style>
+<table class="table table-bordered table-striped" id="PDAEstimator">
+    <thead>
+        
+        <tr>
+            <th>
+                PDA ID
+            </th>
+            <th>
+                Customer Name
+            </th>
+            <th style="min-width:150px">
+                @Html.DisplayNameFor(model => model.CustomerCompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VesselName)
+            </th>
+            <th>
+                Port Name
+            </th>
+            <th>
+                Port Information(Dry Bulk)
+            </th>
+            <th>
+                Port Information(Tanker)
+            </th>
+            <th style="min-width:120px">
+                Port Activity Type
+            </th>
+            <th style="min-width:180px">
+                Terminal Name
+            </th>
+            <th style="min-width:180px">
+                BerthName
+            </th>
+            <th style="min-width:110px">
+                Call Type
+            </th>
+
+            <th style="min-width:150px">
+                Cargo Name
+            </th>
+            <th>
+                Cargo Qty
+            </th>
+            <th style="min-width:150px">
+                Cargo Unit of Masurement
+            </th>
+            <th>
+                Load/Discharge Rate
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrencyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ROE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DWT )
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalDraft)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GRT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NRT)
+            </th>
+            <th style="min-width:100px">
+                Berth Stay Hours Foreign
+            </th>
+            <th style="min-width:100px">
+                Berth Stay Day Foreign
+            </th>
+            <th style="min-width:100px">
+                Berth Stay Shift Foreign
+            </th>
+            <th style="min-width:120px">
+                Berth Stay Hours Coastal)
+            </th>
+            <th style="min-width:100px">
+                Berth Stay Day Coastal
+            </th>
+            <th style="min-width:100px">
+                Berth Stay Shift Coastal
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnchorageStay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LOA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beam)
+            </th>
+            <th style="min-width:70px">
+                @Html.DisplayNameFor(model => model.ETA)
+            </th>
+            <th>Vessel Ballast</th>
+            <th>IsReducedGRT</th>
+            <th>CreatedBy</th>
+            <th>CreationDate</th>
+@*             <th>ModifyUserID</th>
+            <th>ModifyDate</th> *@
+
+            <th style="min-width:200px"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PDAEstimatorID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerCompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VesselName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PortName)
+                </td>
+                <td width="20">
+                    @if (item.PortFile != null)
+                    @Html.ActionLink(item.PortFile, "DownloadFile", new { fileName = item.PortFile })
+                    @*@Html.DisplayFor(modelItem => item.PortFile)*@
+                </td>
+                <td width="20">
+                    @if (item.PortFileTanker != null)
+                        @Html.ActionLink(item.PortFileTanker, "DownloadFile", new { fileName = item.PortFileTanker })
+                    @*@Html.DisplayFor(modelItem => item.PortFile)*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ActivityType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TerminalName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BerthName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CallTypeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CargoName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CargoQty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CargoUnitofMasurement)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoadDischargeRate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrencyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ROE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DWT)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArrivalDraft)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GRT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NRT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BerthStay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BerthStayDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BerthStayShift)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BerthStayHoursCoastal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BerthStayDayCoastal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BerthStayShiftCoastal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnchorageStay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LOA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Beam)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ETA)
+                </td>
+
+                @*                 <td>
+            @Html.DisplayFor(modelItem => item.VesselBallast)
+            </td> *@
+                <td>
+
+                    @if (item.VesselBallast == 1)
+                    {
+                        <span class="badge badge-danger">No</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-success">Yes</span>
+                    }
+
+                </td>
+                <td>
+
+                    @if (item.IsReducedGRT == 1)
+                    {
+                        <span class="badge badge-danger">No</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-success">Yes</span>
+                    }
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedBy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreationDate)
+                </td>
+@*                 <td>
+                    @Html.DisplayFor(modelItem => item.ModifyUser)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModifyDate)
+                </td> *@
+
+                @{
+
+                    @if (ViewBag.UserPermissionModel != null)
+                    {
+                        List<UserPermissionRights> userPermissionRights = new List<UserPermissionRights>();
+                        List<UserRoleName> userRoleName = new List<UserRoleName>();
+                        userPermissionRights = ViewBag.UserPermissionModel;
+
+
+                        userRoleName = ViewBag.UserRoleName;
+
+                        <td min-width="230px">
+                            @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "PDA Estimator" && x.UserRolePermission == "ViewPDA").Count() > 0))
+                            {
+                                <a class="btn btn-info btn-sm" onclick="EditPDAEstimator(@item.PDAEstimatorID, 'Copy')">
+                                    <i class="fas fa-pencil-alt"></i> Copy
+                                </a>
+                                <a class="btn btn-warning btn-sm" href="@Url.Action("PDAEstimatorDonwload", "PDAEstimator", new { id = @item.PDAEstimatorID})" target="_blank">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                                <a class="btn btn-success btn-sm" href="@Url.Action("PDAEstimator", "PDAEstimator", new { id = @item.PDAEstimatorID})" target="_blank">
+                                    <i class="fas fa-eye"></i> View
+                                </a>
+                            }
+
+                            @if (userRoleName.Where(x => x.RoleName == "Admin").Count() > 0 || (userPermissionRights.Where(x => x.MenuName == "PDA Estimator" && x.UserRolePermission == "Delete").Count() > 0))
+                            {
+                                <a class="btn btn-danger btn-sm" onclick="deletePDAEstimator(@item.PDAEstimatorID)">
+                                    <i class="fas fa-trash"></i> Delete
+                                </a>
+                            }
+
+                        </td>
+                    }
+
+                }
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+<!-- jQuery -->
+<script src="~/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/plugins/datatables/jquery.datatables.js"></script>
+<script src="~/plugins/datatables/jquery.datatables.min.js"></script>
+<script src="~/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="~/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="~/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="~/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="~/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="~/plugins/jszip/jszip.min.js"></script>
+<script src="~/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="~/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="~/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="~/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="~/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script>
+
+
+
+
+    $(document).ready(function () {
+        $("#PDAEstimator").DataTable({
+            order: [[0, 'desc']],
+            scrollX: true,
+            scrollCollapse: true,
+            scrollY: '400px',
+                fixedHeader: {
+                header: true,
+            },
+            "responsive": false, "lengthChange": false, "autoWidth": false,
+            "buttons": [{
+                extend: 'excel',
+                text: 'Export Results',
+                className: 'btn btn-default',
+                exportOptions: {
+                    columns: 'th:not(:last-child)'
+                }
+            }]
+        }).buttons().container().appendTo('#PDAEstimator_wrapper .col-md-6:eq(0)');
+
+    });</script>
